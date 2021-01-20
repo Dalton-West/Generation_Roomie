@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:generation_roomie/consts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Welcome extends StatefulWidget {
   static const String id = 'welcome';
   @override
@@ -11,11 +12,15 @@ class _WelcomeState extends State<Welcome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Image.asset('icon.svg'),
-            Text('Generation Roommate', style: kWelcomeText,)
-          ],
+        child: Center(
+          child: Column(
+            children: [
+              // Image.asset('icon.svg'),
+              FaIcon(FontAwesomeIcons.users, size: 120.0, color: Colors.white,),
+              Text('Generation Roommate', style: kWelcomeText,),
+              // TODO: Add Login & Register Buttons
+            ],
+          ),
         ),
       ),
     );
