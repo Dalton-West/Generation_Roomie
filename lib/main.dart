@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:generation_roomie/consts.dart';
 import 'package:generation_roomie/pages/welcome.dart';
+import 'package:generation_roomie/pages/login.dart';
 
 void main() {
   runApp(GenerationRoomie());
@@ -19,10 +20,11 @@ class GenerationRoomie extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white),
         ),
       ),
-      initialRoute: Welcome.id,
+      // TODO: Change To Welcome When Done Designing
+      initialRoute: Login.id,
       routes: {
         Welcome.id: (context) => Welcome(),
-
+        Login.id: (context) => Login(),
       },
     );
   }
