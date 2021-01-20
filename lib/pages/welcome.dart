@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:generation_roomie/consts.dart';
 class Welcome extends StatefulWidget {
   static const String id = 'welcome';
   @override
@@ -12,8 +13,8 @@ class _WelcomeState extends State<Welcome> {
       body: SafeArea(
         child: Column(
           children: [
-            Text('Item 1'),
-            Text(Welcome.id)
+            Image.asset('icon.svg'),
+            Text('Generation Roommate', style: kWelcomeText,)
           ],
         ),
       ),
