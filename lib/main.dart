@@ -22,7 +22,7 @@ class GenerationRoomie extends StatelessWidget {
         ),
       ),
       // TODO: Change To Welcome When Done Designing
-      initialRoute: Register.id,
+      initialRoute: Welcome.id,
       routes: {
         Welcome.id: (context) => Welcome(),
         Login.id: (context) => Login(),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:generation_roomie/consts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:generation_roomie/UI/rounded_buttons.dart';
+import 'package:generation_roomie/pages/login.dart';
+import 'package:generation_roomie/pages/register.dart';
 class Welcome extends StatefulWidget {
   static const String id = 'welcome';
   @override
@@ -22,12 +24,16 @@ class _WelcomeState extends State<Welcome> {
               Text('Generation Roommate'.toUpperCase(), style: kWelcomeText,),
               RoundedButton(
                 color: kColorBurntSienna,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Login.id);
+                },
                 text: 'Login',
                 ),
                 RoundedButton(
                 color: kColorBurntSienna,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Register.id);
+                },
                 text: 'Register',
                 ),
               // TODO: Add functionality to Login & Register Buttons

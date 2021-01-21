@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generation_roomie/consts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:generation_roomie/UI/rounded_buttons.dart';
+import 'package:generation_roomie/pages/login.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'register';
@@ -28,10 +29,19 @@ class _RegisterState extends State<Register> {
                 'Generation Roommate'.toUpperCase(),
                 style: kWelcomeText,
               ),
-              // Add Input Boxes
+              TextField(
+                decoration: kTextInputBox.copyWith(
+                    hintText: 'Enter your email address'),
+              ),
+              TextField(
+                decoration:
+                    kTextInputBox.copyWith(hintText: 'Create a password'),
+              ),
               RoundedButton(
                 color: kColorBurntSienna,
-                onPressed: () {},
+                onPressed: () {
+                  print('Reg Button');
+                },
                 text: 'Register ',
               ),
               Row(
@@ -41,14 +51,19 @@ class _RegisterState extends State<Register> {
                     padding: const EdgeInsets.all(8.0),
                     child: HyperLink(
                       text: 'Privacy Policy',
-                      onTap: () {},
+                      onTap: () {
+                        print('Privacy Policy');
+                      },
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: HyperLink(
                       text: 'Login',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, Login.id);
+                        print('Login Text');
+                      },
                     ),
                   )
                 ],
