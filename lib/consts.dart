@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // Theme Colors
 const Color kColorCharcoal = Color(0xFF264653);
 const Color kColorPersiangreen = Color(0xFF2A9D8F);
@@ -43,6 +44,20 @@ class HyperLink extends StatelessWidget {
         child: Text(text,
             style: kHyperlinks),
         onTap: onTap);
+  }
+}
+//Drawer Items
+class DrawerItem extends StatelessWidget {
+  DrawerItem({this.iconName, this.drawerText});
+  final IconData iconName;
+  final String drawerText;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: FaIcon(iconName, color: Colors.white,),
+      title: Text(drawerText, style: TextStyle(color: Colors.white),),
+    );
   }
 }
 // Define UI Layouts

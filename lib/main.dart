@@ -3,6 +3,7 @@ import 'package:generation_roomie/consts.dart';
 import 'package:generation_roomie/pages/register.dart';
 import 'package:generation_roomie/pages/welcome.dart';
 import 'package:generation_roomie/pages/login.dart';
+import 'package:generation_roomie/pages/homePage.dart';
 
 void main() {
   runApp(GenerationRoomie());
@@ -16,6 +17,7 @@ class GenerationRoomie extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kColorCharcoal,
         scaffoldBackgroundColor: kColorPersiangreen,
+        canvasColor: kColorPersiangreen,
         accentColor: kColorBurntSienna,
         textTheme: TextTheme(
           bodyText2: TextStyle(color: Colors.white),
@@ -27,6 +29,7 @@ class GenerationRoomie extends StatelessWidget {
         Welcome.id: (context) => Welcome(),
         Login.id: (context) => Login(),
         Register.id: (context) => Register(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }
