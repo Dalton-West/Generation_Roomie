@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // Theme Colors
 const Color kColorCharcoal = Color(0xFF264653);
 const Color kColorPersiangreen = Color(0xFF2A9D8F);
@@ -32,6 +31,11 @@ const kTextInputBox = InputDecoration(
   ),
 );
 
+// Container Decoration Home !!! NOTE: Cannot invoke a non-'const' factory where a const expression is expected. = No Const constructor declared var type
+
+BoxDecoration kContainerDecoration = BoxDecoration(color: Colors.white30,border: Border.all( color: kColorCharcoal,width: 3.14,),borderRadius: BorderRadius.all(Radius.circular(5)),);
+
+
 // Custom Features
 class HyperLink extends StatelessWidget {
   HyperLink({@required this.text,@required  this.onTap});
@@ -46,21 +50,4 @@ class HyperLink extends StatelessWidget {
         onTap: onTap);
   }
 }
-//Drawer Items
-class DrawerItem extends StatelessWidget {
-  DrawerItem({this.iconName, this.drawerText});
-  final IconData iconName;
-  final String drawerText;
 
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: FaIcon(iconName, color: Colors.white,),
-      title: Text(drawerText, style: TextStyle(color: Colors.white),),
-    );
-  }
-}
-// Define UI Layouts
-class CustomUI {
-  
-}

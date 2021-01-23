@@ -31,24 +31,129 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            DrawerItem(iconName: FaIcon(FontAwesomeIcons.commentAlt),)
             ListTile(
-              leading: FaIcon(FontAwesomeIcons.userCircle),
-              title: Text('Profile'),
+              leading: FaIcon(
+                FontAwesomeIcons.commentAlt,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Messages',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             ListTile(
-              leading: FaIcon(FontAwesomeIcons.cog),
-              title: Text('Settings'),
+              leading: FaIcon(
+                FontAwesomeIcons.userCircle,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Profile',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             ListTile(
-              leading: FaIcon(FontAwesomeIcons.signOutAlt),
-              title: Text('Logout'),
+              leading: FaIcon(
+                FontAwesomeIcons.cog,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Settings',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            ListTile(
+              leading: FaIcon(
+                FontAwesomeIcons.signOutAlt,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Logout',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('Important Info Cell 1')],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 3.0,
+                    ),
+                    Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('Important Info Cell 2')],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
+            // TODO: Add UI Mockup
+            Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('New Column 1')],
+                      ),
+            ),
+             Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('New Column 2')],
+                      ),
+            ),
+             Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('New Column 3')],
+                      ),
+            ),
+             Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('New Column 4')],
+                      ),
+            ),
+             Container(
+                      height: 125.0,
+                      width: 250.0,
+                      decoration: kContainerDecoration,
+                      child: Column(
+                        children: [Text('New Column 5')],
+                      ),
+            ),
+          ],
+          // TODO: Add Footer navigation
         ),
       ),
     );
   }
 }
-
-
+// TODO: Create User Profile page
