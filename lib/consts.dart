@@ -5,6 +5,12 @@ const Color kColorPersiangreen = Color(0xFF2A9D8F);
 const Color kColorOrangeYellow = Color(0xFFE9C46A);
 const Color kColorSandyBrown = Color(0xFFF4A261);
 const Color kColorBurntSienna = Color(0xFFE76F51);
+// Navigator Functions
+Future navigator(context, routeName){
+  return Navigator.pushNamed(context, routeName);
+}
+
+
 // Define Text Styles
 const TextStyle kWelcomeText = TextStyle(color: Colors.white,fontFamily: 'Bellota', fontSize: 30.0, fontWeight: FontWeight.bold);
 const TextStyle kbuttonText = TextStyle(color: Colors.white,fontFamily: 'Bellota', fontSize: 18.0,);

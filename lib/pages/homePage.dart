@@ -9,6 +9,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,64 +22,64 @@ class _HomePageState extends State<HomePage> {
         title: Text('Generation Roomie'),
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: kColorCharcoal,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24.0,
-                ),
-              ),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: const <Widget>[
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: kColorCharcoal,
             ),
-            ListTile(
-              leading: FaIcon(
-                FontAwesomeIcons.commentAlt,
+            child: Text(
+              'Menu',
+              style: TextStyle(
                 color: Colors.white,
-              ),
-              title: Text(
-                'Messages',
-                style: TextStyle(color: Colors.white),
+                fontSize: 24.0,
               ),
             ),
-            ListTile(
-              leading: FaIcon(
-                FontAwesomeIcons.userCircle,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Profile',
-                style: TextStyle(color: Colors.white),
-              ),
+          ),
+          ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.commentAlt,
+              color: Colors.white,
             ),
-            ListTile(
-              leading: FaIcon(
-                FontAwesomeIcons.cog,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Settings',
-                style: TextStyle(color: Colors.white),
-              ),
+            title: Text(
+              'Messages',
+              style: TextStyle(color: Colors.white),
             ),
-            ListTile(
-              leading: FaIcon(
-                FontAwesomeIcons.signOutAlt,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Logout',
-                style: TextStyle(color: Colors.white),
-              ),
+          ),
+          ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.userCircle,
+              color: Colors.white,
             ),
-          ],
-        ),
+            title: Text(
+              'Profile',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.cog,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Settings',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          ListTile(
+            leading: FaIcon(
+              FontAwesomeIcons.signOutAlt,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Logout',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ],
       ),
+    ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -150,10 +156,34 @@ class _HomePageState extends State<HomePage> {
                       ),
             ),
           ],
-          // TODO: Add Footer navigation
         ),
       ),
-    );
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.bell),
+            label: 'Notices',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.commentAlt),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.cog),
+            label: 'Settings',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: kColorBurntSienna,
+        onTap: _onItemTapped,
+      ),
+      );
   }
 }
+
+
 // TODO: Create User Profile page
