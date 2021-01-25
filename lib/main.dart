@@ -4,6 +4,7 @@ import 'package:generation_roomie/pages/register.dart';
 import 'package:generation_roomie/pages/welcome.dart';
 import 'package:generation_roomie/pages/login.dart';
 import 'package:generation_roomie/pages/homePage.dart';
+import 'package:generation_roomie/pages/onboardingPage.dart';
 import 'package:generation_roomie/pages/user/profile.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class GenerationRoomie extends StatelessWidget {
         Register.id: (context) => Register(),
         HomePage.id: (context) => HomePage(),
         ProfilePage.id: (context) => ProfilePage(),
+        OnboardingPage.id: (context) => OnboardingPage(),
       },
     );
   }

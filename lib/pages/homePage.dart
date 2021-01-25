@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:generation_roomie/consts.dart';
+import 'package:generation_roomie/pages/onboardingPage.dart';
+import 'package:generation_roomie/pages/user/profile.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = 'HomePage';
@@ -24,10 +26,10 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const <Widget>[
+        children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: kColorCharcoal,
+              gradient: kCharcoalPearsian,
             ),
             child: Text(
               'Menu',
@@ -38,6 +40,12 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           ListTile(
+            title: Text('Onboarding'),
+            onTap: (){
+              Navigator.pushNamed(context, OnboardingPage.id);
+            },
+          ),
+          ListTile(
             leading: FaIcon(
               FontAwesomeIcons.commentAlt,
               color: Colors.white,
@@ -46,16 +54,16 @@ class _HomePageState extends State<HomePage> {
               'Messages',
               style: TextStyle(color: Colors.white),
             ),
+            trailing: FaIcon(FontAwesomeIcons.caretRight, color: Colors.white,),
+            onTap: (){},
           ),
           ListTile(
-            leading: FaIcon(
-              FontAwesomeIcons.userCircle,
-              color: Colors.white,
-            ),
-            title: Text(
-              'Profile',
-              style: TextStyle(color: Colors.white),
-            ),
+            leading: FaIcon(FontAwesomeIcons.userCircle,color: Colors.white,),
+            title: Text('Profile',style: TextStyle(color: Colors.white),),
+            trailing: FaIcon(FontAwesomeIcons.caretRight, color: Colors.white,),
+            onTap: (){
+              Navigator.pushNamed(context, ProfilePage.id);
+            },
           ),
           ListTile(
             leading: FaIcon(
@@ -66,6 +74,8 @@ class _HomePageState extends State<HomePage> {
               'Settings',
               style: TextStyle(color: Colors.white),
             ),
+            trailing: FaIcon(FontAwesomeIcons.caretRight, color: Colors.white,),
+            onTap: (){},
           ),
           ListTile(
             leading: FaIcon(
@@ -76,6 +86,8 @@ class _HomePageState extends State<HomePage> {
               'Logout',
               style: TextStyle(color: Colors.white),
             ),
+            trailing: FaIcon(FontAwesomeIcons.caretRight, color: Colors.white,),
+            onTap: (){},
           ),
         ],
       ),
@@ -184,6 +196,3 @@ class _HomePageState extends State<HomePage> {
       );
   }
 }
-
-
-// TODO: Create User Profile page
