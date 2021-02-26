@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Theme Colors
 const Color kColorCharcoal = Color(0xFF264653);
@@ -50,12 +49,12 @@ const kTextInputBox = InputDecoration(
 // Container Decoration Home !!! NOTE: Cannot invoke a non-'const' factory where a const expression is expected. = No Const constructor declared var type
 
 BoxDecoration kContainerDecoration = BoxDecoration(
-  color: Colors.white30,
+  color: Colors.white54,
   border: Border.all(
     color: kColorCharcoal,
-    width: 3.14,
+    width: 1.5,
   ),
-  borderRadius: BorderRadius.all(Radius.circular(5)),
+  borderRadius: BorderRadius.all(Radius.circular(10)),
 );
 
 // Custom Features
